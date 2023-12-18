@@ -10370,6 +10370,7 @@ nav {
   top: 0;
   width: 100%;
   color: white;
+  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
 }
 nav div {
   display: flex;
@@ -10532,9 +10533,56 @@ header img {
   background-color: blue;
 }
 
+#section_4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#section_4 .contenu_features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#section_4 .contenu_features .texte_features {
+  width: 40%;
+}
+#section_4 .contenu_features img {
+  width: 50%;
+}
+#section_4 .texte_features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#section_4 .icons_features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#section_4 .texte {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#section_4 i {
+  margin-right: 1rem;
+  color: rgb(116, 15, 214);
+}
+
 body {
   margin: 0;
   padding: 0;
+}
+body .titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 body .none {
   display: none;
