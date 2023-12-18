@@ -10411,8 +10411,10 @@ nav .dropdown {
 nav button {
   border-radius: 5px;
   background-color: transparent;
+  color: white;
+  border-color: white;
 }
-nav .menu_burger {
+nav i {
   display: none;
 }
 
@@ -10429,8 +10431,11 @@ nav .menu_burger {
     align-items: center;
     flex-direction: column;
     row-gap: 1rem;
-    position: absolute;
     top: 1rem;
+    color: black;
+  }
+  .nav_burger a {
+    color: black;
   }
 }
 header {
@@ -10452,6 +10457,12 @@ header div {
 }
 header img {
   width: 30%;
+  animation: mvt 2s infinite alternate;
+}
+@keyframes mvt {
+  to {
+    margin-top: 2rem;
+  }
 }
 
 #section_1 {
@@ -10493,6 +10504,11 @@ header img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+#section_3 .service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #section_3 .cards_service {
   display: grid;
@@ -10574,6 +10590,55 @@ header img {
   color: rgb(116, 15, 214);
 }
 
+#section_5 {
+  background-color: rgb(249, 248, 254);
+}
+#section_5 .contenu_testimonials {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 4rem;
+  width: 100vw;
+}
+#section_5 .carousel_item {
+  position: relative;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#section_5 .user_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#section_5 .fa-user {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+#section_5 .div_car {
+  position: absolute;
+  top: 4rem;
+}
+#section_5 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#section_5 .btn button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+#section_5 .btn .actif {
+  background-color: blue;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10585,7 +10650,7 @@ body .titre {
   flex-direction: column;
 }
 body .none {
-  display: none;
+  display: none !important;
 }
 
 /*# sourceMappingURL=app.css.map */
