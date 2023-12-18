@@ -15,6 +15,8 @@ menu_burger.addEventListener("click",()=>{
 })
 li_dropdown.addEventListener("click",()=>{
     dropdown.classList.toggle("none")
+    li_dropdown.querySelector("span").classList.toggle("fa-chevron-down")
+    li_dropdown.querySelector("span").classList.toggle("fa-chevron-up")
 })
 
 

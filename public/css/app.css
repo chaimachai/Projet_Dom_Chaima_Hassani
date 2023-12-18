@@ -10485,6 +10485,53 @@ header img {
   color: white;
 }
 
+#section_3 {
+  background-color: rgb(249, 248, 254);
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#section_3 .cards_service {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+#section_3 .card_service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  background-color: white;
+  padding: 2rem;
+}
+#section_3 .card_service h4 {
+  color: rgb(45, 73, 100);
+}
+#section_3 .card_service:hover {
+  color: white;
+}
+#section_3 .card_service:first-of-type:hover {
+  background-color: blue;
+}
+#section_3 .card_service:nth-of-type(2):hover {
+  background-color: blue;
+}
+#section_3 .card_service:nth-of-type(3):hover {
+  background-color: blue;
+}
+#section_3 .card_service:nth-of-type(4):hover {
+  background-color: blue;
+}
+#section_3 .card_service:nth-of-type(5):hover {
+  background-color: blue;
+}
+#section_3 .card_service:last-of-type:hover {
+  background-color: blue;
+}
+
 body {
   margin: 0;
   padding: 0;
