@@ -1,0 +1,55 @@
+nav 
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: row
+    position: fixed
+    top: 0
+    width: 100%
+    div
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: row
+        column-gap: 1rem
+    ul
+        list-style: none
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: row
+        column-gap: 1rem
+    a 
+        text-decoration: none
+        color: black
+    .div_dropdown
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        position: relative
+    .dropdown
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        background-color: white
+        color: black
+        position: absolute
+        top: 1rem
+    button
+        border-radius: 5px
+        background-color: transparent
+    .menu_burger
+        display: none
+@media screen and (max-width: 968px)
+    .menu_burger
+        display: flex
+    .nav_none
+        display: none
+    .nav_burger
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        row-gap: 1rem
