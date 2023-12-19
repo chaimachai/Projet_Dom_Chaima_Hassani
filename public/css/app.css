@@ -10660,10 +10660,12 @@ header img {
   filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.2));
   padding: 0;
   margin: 0;
+  width: fit-content;
 }
 #testimonials .item {
   position: relative;
-  width: 30vw;
+  width: 28vw;
+  padding: 1rem;
 }
 #testimonials .user_item {
   filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.2));
@@ -10968,9 +10970,9 @@ header img {
 }
 
 footer {
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../../../public/images/hero-bg.jpg") center center no-repeat;
+  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../../../public/images/footer-bg.jpg") center center no-repeat;
   color: white;
-  padding: 4rem;
+  padding: 4rem 4rem 0 4rem;
 }
 footer .footer {
   display: grid;
@@ -11008,6 +11010,26 @@ footer .footer input:nth-of-type(2) {
   color: white;
   padding-left: 1rem;
   padding-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .logo_div {
+  width: 100%;
+  padding: 1rem;
+  border-top: 1px solid rgb(103, 83, 242);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 1rem;
+  height: fit-content;
+}
+footer .logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgb(103, 83, 242);
   display: flex;
   justify-content: center;
   align-items: center;

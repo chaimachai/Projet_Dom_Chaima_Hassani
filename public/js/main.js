@@ -128,16 +128,16 @@ btn.forEach(elements => {
             btn.forEach(element => {
                 if(element.className.includes("active")){
                     if(element.className.includes("btn2")){
-                        carousel.scrollLeft -= carousel.clientWidth / 3
+                        carousel.scrollLeft -= carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn3")){
-                        carousel.scrollLeft -= 2*carousel.clientWidth / 3
+                        carousel.scrollLeft -= 2*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn4")){
-                        carousel.scrollLeft -= 3*carousel.clientWidth / 3
+                        carousel.scrollLeft -= 3*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn5")){
-                        carousel.scrollLeft -= 4*carousel.clientWidth / 3
+                        carousel.scrollLeft -= 4*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }
                 }
@@ -147,19 +147,19 @@ btn.forEach(elements => {
             btn.forEach(element => {
                 if(element.className.includes("active")){
                     if(element.className.includes("btn1")){
-                        carousel.scrollLeft += carousel.clientWidth / 3
+                        carousel.scrollLeft += carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn3")){
                         console.log("test3");
-                        carousel.scrollLeft -= carousel.clientWidth / 3
+                        carousel.scrollLeft -= carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn4")){
                         console.log("test4");
-                        carousel.scrollLeft -= 2*carousel.clientWidth / 3
+                        carousel.scrollLeft -= 2*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn5")){
                         console.log("test5");
-                        carousel.scrollLeft -= 3*carousel.clientWidth / 3
+                        carousel.scrollLeft -= 3*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }
                 }
@@ -169,16 +169,16 @@ btn.forEach(elements => {
             btn.forEach(element => {
                 if(element.className.includes("active")){
                     if(element.className.includes("btn1")){
-                        carousel.scrollLeft += 2*carousel.clientWidth / 3
+                        carousel.scrollLeft += 2*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn2")){
-                        carousel.scrollLeft += carousel.clientWidth / 3
+                        carousel.scrollLeft += carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn4")){
-                        carousel.scrollLeft -= carousel.clientWidth / 3
+                        carousel.scrollLeft -= carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn5")){
-                        carousel.scrollLeft -= 2*carousel.clientWidth / 3
+                        carousel.scrollLeft -= 2*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }
                 }
@@ -188,16 +188,16 @@ btn.forEach(elements => {
             btn.forEach(element => {
                 if(element.className.includes("active")){
                     if(element.className.includes("btn1")){
-                        carousel.scrollLeft += 3*carousel.clientWidth / 3
+                        carousel.scrollLeft += 3*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn2")){
-                        carousel.scrollLeft += 2*carousel.clientWidth / 3
+                        carousel.scrollLeft += 2*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn3")){
-                        carousel.scrollLeft += carousel.clientWidth / 3
+                        carousel.scrollLeft += carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn5")){
-                        carousel.scrollLeft -= carousel.clientWidth / 3
+                        carousel.scrollLeft -= carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }
                 }
@@ -207,16 +207,16 @@ btn.forEach(elements => {
             btn.forEach(element => {
                 if(element.className.includes("active")){
                     if(element.className.includes("btn1")){
-                        carousel.scrollLeft += 4*carousel.clientWidth / 3 
+                        carousel.scrollLeft += 4*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn2")){
-                        carousel.scrollLeft -= 3*carousel.clientWidth / 3
+                        carousel.scrollLeft -= 3*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn3")){
-                        carousel.scrollLeft -= 2*carousel.clientWidth / 3
+                        carousel.scrollLeft -= 2*carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }else if (element.className.includes("btn4")){
-                        carousel.scrollLeft += carousel.clientWidth / 3
+                        carousel.scrollLeft += carousel_item[0].clientWidth
                         element.classList.remove("active")
                     }
                 }
