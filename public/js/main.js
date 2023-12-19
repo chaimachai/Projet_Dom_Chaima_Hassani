@@ -30,7 +30,8 @@ let month = true
 
 // section 8
 let texte_accordion = document.querySelectorAll(".texte_accordion");
-let div_accordion = document.querySelectorAll(".accordion")
+let div_accordion = document.querySelectorAll(".accordion");
+let span_chevron = document.querySelectorAll(".chevron_a");
 
 //.. Events
 
@@ -186,19 +187,24 @@ btn_oval.addEventListener("click",()=>{
 // section 8
 div_accordion.forEach(element => {
     element.addEventListener("click",()=>{
-        div_accordion.forEach(elements => {
-            if(elements.className.includes("actif")){
-                if(element != elements)
+        let chevron = element.firstElementChild.lastElementChild;
+        if (chevron.className.includes("fa-chevron-up")){
+            element.classList.remove("actif");
+            element.classList.add("actifno");
+            chevron.classList.remove("fa-chevron-up");
+            chevron.classList.add("fa-chevron-down");
+        }else{
+            div_accordion.forEach(elements => {
+                let chevron2 = elements.firstElementChild.lastElementChild;
                 elements.classList.remove("actif");
                 elements.classList.add("actifno");
-            }
-        })
-        if (element.className.includes("actif")){
-            element.classList.add("actifno")
-            element.classList.remove("actif");
-        }else{
-            element.classList.remove("actifno")
+                chevron2.classList.remove("fa-chevron-up");
+                chevron2.classList.add("fa-chevron-down");
+            })
+            element.classList.remove("actifno");
             element.classList.add("actif");
+            chevron.classList.remove("fa-chevron-down");
+            chevron.classList.add("fa-chevron-up");
         }
     })
 })
