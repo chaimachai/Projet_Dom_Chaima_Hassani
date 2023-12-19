@@ -50,3 +50,11 @@
             background-color: rgb(253, 77, 36)
         &:last-of-type:hover
             background-color: rgb(16, 213, 200)
+@media screen and (max-width: 576px)
+    .cards_service
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(6,1fr)
+@media screen and (max-width: 768px)
+    .cards_service
+        grid-template-columns: repeat(2,1fr)
+        grid-template-rows: repeat(3,1fr)
