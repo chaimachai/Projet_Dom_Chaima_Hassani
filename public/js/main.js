@@ -12,23 +12,26 @@ let li_dropdown = document.querySelector(".li_dropdown");
 let dropdown = document.querySelector(".dropdown");
 let nav = document.querySelector("nav");
 
-// section 5
+// section services
+
+
+// section testimonials
 let carousel = document.querySelector(".contenu_testimonials");
 let carousel_item = document.querySelectorAll(".carousel_item");
-let btn = document.querySelector("#section_5").querySelectorAll("button");
+let btn = document.querySelector("#testimonials").querySelectorAll("button");
 
-// section 6
+// section current_tech
 let h4 = document.querySelector(".h4").querySelectorAll("h4");
 let tabs = document.querySelectorAll(".tabs");
 
-// section 7
+// section pricing
 let h2 = document.querySelector(".cards_7").querySelectorAll("h2");
 let btn_oval = document.querySelector(".oval");
 let p_month = document.querySelector(".p_month");
 let p_year = document.querySelector(".p_year")
 let month = true
 
-// section 8
+// section faq
 let texte_accordion = document.querySelectorAll(".texte_accordion");
 let div_accordion = document.querySelectorAll(".accordion");
 let span_chevron = document.querySelectorAll(".chevron_a");
@@ -46,7 +49,9 @@ li_dropdown.addEventListener("click",()=>{
     li_dropdown.querySelector("span").classList.toggle("fa-chevron-up");
 })
 
-//section 5
+// section services
+
+//section testimonials
 btn.forEach(elements => {
     elements.addEventListener("click",(e)=>{
         if (e.target ==  btn[0]){
@@ -151,17 +156,21 @@ btn.forEach(elements => {
     })
 })
 
-//section 6
+//section current_tech
 h4.forEach(element => {
     element.addEventListener("click",()=>{
         tabs.forEach(element =>{
             element.classList.add("none");
         })
+        h4.forEach(hr => {
+            hr.nextElementSibling.classList.remove("actif");
+        })
         document.querySelector(`.div_${element.className}`).classList.remove("none");
+        element.nextElementSibling.classList.add("actif");
     })
 })
 
-//section 7
+//section pricing
 btn_oval.addEventListener("click",()=>{
     if(month){
         h2.forEach(element => {
@@ -184,7 +193,7 @@ btn_oval.addEventListener("click",()=>{
     }
 })
 
-// section 8
+// section faq
 div_accordion.forEach(element => {
     element.addEventListener("click",()=>{
         let chevron = element.firstElementChild.lastElementChild;
