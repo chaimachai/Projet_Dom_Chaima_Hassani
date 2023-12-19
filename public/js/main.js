@@ -67,14 +67,57 @@ btn_anim.forEach(element => {
 // section services
 card_service.forEach(element => {
     element.addEventListener("mouseover",()=>{
-        element.style.backgroundColor = "red"
-        element.firstElementChild.style.color = "white"
+        switch(element){
+            case card_service[0]:
+                element.style.backgroundColor = "rgb(61, 165, 255)"
+                break
+            case card_service[1]:
+                element.style.backgroundColor = "rgb(255, 162, 106)"
+                break
+            case card_service[2]:
+                element.style.backgroundColor = "rgb(227, 0, 93)"
+                break
+            case card_service[3]:
+                element.style.backgroundColor = "rgb(254, 178, 38)"
+                break
+            case card_service[4]:
+                element.style.backgroundColor = "rgb(253, 77, 36)"
+                break
+            case card_service[5]:
+                element.style.backgroundColor = "rgb(16, 213, 200)"
+                break
+        }
+        element.querySelector("h4").style.color = "white";
+        element.style.color = "white";
+        element.firstElementChild.style.color = "white";
     })
 })
+
 card_service.forEach(element => {
     element.addEventListener("mouseleave",()=>{
-        element.style.backgroundColor = "white"
-        element.firstElementChild.style.color = "red"
+        switch(element){
+            case card_service[0]:
+                element.firstElementChild.style.color = "rgb(61, 165, 255)"
+                break
+            case card_service[1]:
+                element.firstElementChild.style.color = "rgb(255, 162, 106)"
+                break
+            case card_service[2]:
+                element.firstElementChild.style.color = "rgb(227, 0, 93)"
+                break
+            case card_service[3]:
+                element.firstElementChild.style.color = "rgb(254, 178, 38)"
+                break
+            case card_service[4]:
+                element.firstElementChild.style.color = "rgb(253, 77, 36)"
+                break
+            case card_service[5]:
+                element.firstElementChild.style.color = "rgb(16, 213, 200)"
+                break
+        }
+        element.querySelector("h4").style.color = "rgb(45,73,100)";
+        element.style.backgroundColor= "white";
+        element.style.color = "black";
     })
 })
 

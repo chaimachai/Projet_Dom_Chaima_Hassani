@@ -10873,6 +10873,10 @@ header img {
   color: white;
   padding: 4rem;
 }
+#faq hr {
+  background-color: rgb(198, 174, 246);
+  border: 1px solid rgb(198, 174, 246);
+}
 #faq .accordions {
   display: flex;
   justify-content: center;
@@ -11028,6 +11032,13 @@ body .titre {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+body .titre hr {
+  width: 3rem;
+  margin-top: 0;
+  height: 0.1rem;
+  background-color: rgb(88, 70, 249);
+  border: 1px solid rgb(88, 70, 249);
 }
 body .none {
   display: none !important;
