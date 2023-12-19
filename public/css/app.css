@@ -10620,41 +10620,53 @@ header img {
 #section_5 {
   background-color: rgb(249, 248, 254);
   overflow-x: hidden;
+  padding: 4rem;
 }
 #section_5 .contenu_testimonials {
   display: flex;
   flex-direction: row;
-  overflow-x: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
-  padding: 8rem;
-  column-gap: 4rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  column-gap: 2rem;
   width: 100%;
 }
+#section_5 .fa-quote-left {
+  margin-right: 0.5rem;
+  color: rgb(166, 157, 251);
+}
+#section_5 .fa-quote-right {
+  margin-left: 0.5rem;
+  color: rgb(166, 157, 251);
+}
 #section_5 .carousel_item {
-  width: 30vw;
+  background-color: white;
+  filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.2));
+  padding: 0;
+  margin: 0;
 }
 #section_5 .item {
   position: relative;
   width: 30vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 #section_5 .user_item {
+  filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.2));
+  background-color: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-#section_5 .fa-user {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
+  background-image: url("../../../public/images/perso.jpg");
+  background-size: cover;
 }
 #section_5 .div_car {
   position: absolute;
-  top: 4rem;
+  bottom: -8rem;
+  left: 2rem;
 }
 #section_5 .btn {
   display: flex;
@@ -10842,7 +10854,13 @@ header img {
   height: 50px;
 }
 #section_8 .div_accordion {
+  position: relative;
   color: rgb(88, 70, 249);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 1rem;
 }
 #section_8 .texte_accordion {
   color: black;
@@ -10856,10 +10874,15 @@ header img {
   height: 50px;
   transition: height 1s;
 }
+#section_8 .chevron_a {
+  position: absolute;
+  right: 0;
+}
 
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 body .titre {
   display: flex;
