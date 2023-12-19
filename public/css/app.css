@@ -10506,9 +10506,6 @@ header img {
   padding: 1rem;
   background: linear-gradient(45deg, rgb(86, 58, 250) 0%, rgb(116, 15, 214) 100%);
 }
-#about button:hover {
-  background: linear-gradient(180deg, rgb(86, 58, 250) 0%, rgb(116, 15, 214) 100%);
-}
 
 @media screen and (max-width: 576px) {
   #about {
@@ -10575,30 +10572,6 @@ header img {
 }
 #services .card_service h4 {
   color: rgb(45, 73, 100);
-}
-#services .card_service:hover {
-  color: white;
-}
-#services .card_service:hover i {
-  color: white;
-}
-#services .card_service:first-of-type:hover {
-  background-color: rgb(61, 165, 255);
-}
-#services .card_service:nth-of-type(2):hover {
-  background-color: rgb(255, 162, 106);
-}
-#services .card_service:nth-of-type(3):hover {
-  background-color: rgb(227, 0, 93);
-}
-#services .card_service:nth-of-type(4):hover {
-  background-color: rgb(254, 178, 38);
-}
-#services .card_service:nth-of-type(5):hover {
-  background-color: rgb(253, 77, 36);
-}
-#services .card_service:last-of-type:hover {
-  background-color: rgb(16, 213, 200);
 }
 
 @media screen and (max-width: 576px) {

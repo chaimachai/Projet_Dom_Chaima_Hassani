@@ -12,8 +12,11 @@ let li_dropdown = document.querySelector(".li_dropdown");
 let dropdown = document.querySelector(".dropdown");
 let nav = document.querySelector("nav");
 
-// section services
+// button section about et pricing 
+let btn_anim = document.querySelectorAll(".animation");
 
+// section services
+let card_service = document.querySelectorAll(".card_service");
 
 // section testimonials
 let carousel = document.querySelector(".contenu_testimonials");
@@ -49,7 +52,31 @@ li_dropdown.addEventListener("click",()=>{
     li_dropdown.querySelector("span").classList.toggle("fa-chevron-up");
 })
 
+// button section about et pricing 
+btn_anim.forEach(element => {
+    element.addEventListener("mouseover",()=>{
+        element.style.background = "linear-gradient(180deg, rgb(86, 58, 250) 0%, rgb(116, 15, 214) 100%)"
+    })
+})
+btn_anim.forEach(element => {
+    element.addEventListener("mouseleave",()=>{
+        element.style.background = "linear-gradient(45deg, rgb(86, 58, 250) 0%, rgb(116, 15, 214) 100%)"
+    })
+})
+
 // section services
+card_service.forEach(element => {
+    element.addEventListener("mouseover",()=>{
+        element.style.backgroundColor = "red"
+        element.firstElementChild.style.color = "white"
+    })
+})
+card_service.forEach(element => {
+    element.addEventListener("mouseleave",()=>{
+        element.style.backgroundColor = "white"
+        element.firstElementChild.style.color = "red"
+    })
+})
 
 //section testimonials
 btn.forEach(elements => {
