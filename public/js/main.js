@@ -228,7 +228,7 @@ btn.forEach(elements => {
 
 //section current_tech
 h4.forEach(element => {
-    element.addEventListener("click",()=>{
+    element.parentElement.addEventListener("click",()=>{
         tabs.forEach(element =>{
             element.classList.add("none");
         })
