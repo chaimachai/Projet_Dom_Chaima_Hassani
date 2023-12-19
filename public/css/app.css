@@ -10998,6 +10998,7 @@ footer .footer input:first-of-type {
   border: none;
   width: 20rem;
   height: 1.5rem;
+  border-radius: 5px;
 }
 footer .footer input:nth-of-type(2) {
   position: absolute;
@@ -11013,6 +11014,8 @@ footer .footer input:nth-of-type(2) {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 footer .logo_div {
   width: 100%;
