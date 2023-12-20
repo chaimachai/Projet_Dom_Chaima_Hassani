@@ -16,9 +16,6 @@ let h3 = nav.querySelectorAll("h3");
 //darkmode
 let btn_dark = document.querySelector(".dark_mode");
 
-// ancre
-let btn_top = document.querySelector(".btn_top");
-
 // button section about et pricing 
 let btn_anim = document.querySelectorAll(".animation");
 
@@ -74,11 +71,6 @@ h3.forEach(element => {
     element.addEventListener("mouseleave",()=>{
         element.nextElementSibling.classList.remove("actif")
     })
-})
-
-// ancre
-btn_top.addEventListener("click",()=>{
-    document.documentElement.scrollTop = 0
 })
 
 // darkmode 
