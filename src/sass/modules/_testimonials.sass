@@ -1,14 +1,14 @@
 #testimonials
     background-color: rgb(249,248,254)
-    overflow-x: hidden
     padding: 4rem
+    .carousel
+        width: 100%
     .contenu_testimonials
         display: flex
         flex-direction: row
         overflow: hidden 
         scroll-behavior: smooth
-        padding-top: 8rem
-        padding-bottom: 8rem
+        padding: 8rem 0 8rem 0
         column-gap: 2rem
         width: 100%
     .fa-quote-left
@@ -58,7 +58,7 @@
             background-color: rgb(78, 61, 249)
 @media screen and (max-width: 576px)
     .item
-        width: 100vw
+        width: 100vw !important
 @media screen and (max-width: 768px)
     .item
         width: 50vw

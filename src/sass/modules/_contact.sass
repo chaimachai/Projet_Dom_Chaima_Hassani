@@ -34,7 +34,37 @@
         display: grid
         gap: 1rem
         width: 100%
+        input, textarea
+            border: 1px solid rgb(221, 220, 223)
+        .button_form
+            display: flex
+            justify-content: center
+            align-items: center
+        button
+            width: fit-content
+            background-color: rgb(78, 61, 249)
+            color: white
+            border-radius: 5px
+            border-color:  rgb(78, 61, 249)
+            padding: 1rem
+            
         div
             display: grid
             grid-template-columns: 1fr 1fr
             gap: 1rem
+@media screen and (max-width: 576px)
+    .ligne1
+        grid-template-columns: 1fr !important
+    .ligne2
+        grid-template-columns: 1fr !important
+    form
+        div
+            grid-template-columns: 1fr !important
+@media screen and (max-width: 978px)  and (min-width: 577px)
+    .ligne1
+        grid-template-columns: 1fr !important
+    .ligne2
+        grid-template-columns: 1fr !important
+    form
+        div
+            grid-template-columns: 1fr 1fr

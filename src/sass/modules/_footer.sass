@@ -2,16 +2,22 @@ footer
     background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../../../public/images/footer-bg.jpg") center center no-repeat
     color: white
     padding: 4rem 4rem 0 4rem
+    a
+        text-decoration: none
+        color: white
     .footer
         display: grid
         grid-template-columns: 1.5fr 1fr 1fr 2fr
         span
             margin-right: 1rem
         .span
+            text-align: start
             p
                 margin: 1rem
+                margin-left: 0
             div:nth-of-type(2)
                 margin-top: 2rem
+
             span
                 font-weight: bolder
         .input
@@ -56,9 +62,9 @@ footer
         display: flex
         justify-content: center
         align-items: center
-@media screen and (max-width: 576px)
-    .footer
-        grid-template-columns: 1fr
 @media screen and (max-width: 768px)
     .footer
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr !important
+@media screen and (max-width: 978px) and (min-width: 769px)
+    .footer
+        grid-template-columns: 1fr 1fr !important

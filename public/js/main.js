@@ -11,6 +11,7 @@ let nav_burger = document.querySelector(".nav");
 let li_dropdown = document.querySelector(".li_dropdown");
 let dropdown = document.querySelector(".dropdown");
 let nav = document.querySelector("nav");
+let h3 = nav.querySelectorAll("h3");
 
 // button section about et pricing 
 let btn_anim = document.querySelectorAll(".animation");
@@ -48,8 +49,16 @@ menu_burger.addEventListener("click",()=>{
 })
 li_dropdown.addEventListener("click",()=>{
     dropdown.classList.toggle("none");
-    li_dropdown.querySelector("span").classList.toggle("fa-chevron-down");
-    li_dropdown.querySelector("span").classList.toggle("fa-chevron-up");
+})
+h3.forEach(element => {
+    element.addEventListener("mouseover",()=>{
+        element.nextElementSibling.classList.add("actif")
+    })
+})
+h3.forEach(element => {
+    element.addEventListener("mouseleave",()=>{
+        element.nextElementSibling.classList.remove("actif")
+    })
 })
 
 // button section about et pricing 
@@ -245,6 +254,7 @@ btn_oval.addEventListener("click",()=>{
     if(month){
         h2.forEach(element => {
             element.innerHTML = element.innerHTML*10;
+            element.nextElementSibling.innerHTML = "/year"
         })
         month = false;
         btn_oval.firstElementChild.classList.remove("month");
@@ -254,6 +264,7 @@ btn_oval.addEventListener("click",()=>{
     }else{
         h2.forEach(element => {
             element.innerHTML = element.innerHTML/10;
+            element.nextElementSibling.innerHTML = "/month"
         })
         month = true;
         btn_oval.firstElementChild.classList.remove("year");
