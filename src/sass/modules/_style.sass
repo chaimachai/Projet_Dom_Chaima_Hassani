@@ -10,6 +10,8 @@
 @import ./_faq
 @import ./_contact
 @import ./_footer
+
+
 body
     margin: 0
     padding: 0
@@ -26,4 +28,66 @@ body
             border: 1px solid rgb(88,70,249)
     .none
         display: none !important
-    
+
+body.darkM
+    #about
+        background-color: $bleu 
+        color: white
+    #services
+        background-color: $bleu
+        color: white
+        .card_service
+            background-color: $gris
+            color: black
+    #features
+        background-color: $mauve
+        color: white
+    #testimonials
+        background-color: $bleu 
+        color: white
+        .carousel_item
+            background-color: $gris
+            color: black
+        .div_car
+            color: white
+    #current_tech
+        background-color: $mauve
+        color: white
+    #pricing
+        background-color: $bleu
+        color: white
+        .btn_7
+            background-color: $bleu
+        .card_7
+            background-color: $gris
+            color: black
+        .info
+            background-color: $mauve
+            color: white
+        .card_7:nth-of-type(2)
+            background-color: rgb(88,70,249)
+            .div_btn7
+                background-color: $gris
+        h3
+            color: $gris
+        h2
+            color: $gris
+    #faq
+        .accordion
+            background-color: $mauveF
+        .div_accordion
+            color: white
+    #contact
+        background-color: $mauve
+        color: white
+        .card_9
+            background-color: $gris
+            color: $mauveF
+            input, textarea
+                color: $mauveF
+                background-color: $gris
+                border: 1px solid $mauveF
+            button
+                color: $gris
+                border-color:  $mauve
+                background-color: $mauve

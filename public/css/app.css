@@ -10440,6 +10440,15 @@ nav .menu_burger {
   }
 }
 
+.dark_mode {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 968px) {
   .menu_burger {
     display: flex !important;
@@ -10455,7 +10464,7 @@ nav .menu_burger {
     row-gap: 1rem;
     top: 1rem;
   }
-  nav button {
+  nav .started {
     display: none;
   }
 }
@@ -10890,9 +10899,6 @@ header img {
   background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
   border: none;
 }
-#pricing button:hover {
-  background: linear-gradient(180deg, rgb(86, 58, 250) 0%, rgb(116, 15, 214) 100%);
-}
 #pricing .cards_7 {
   padding: 0;
   display: grid;
@@ -11224,6 +11230,89 @@ body .titre hr {
 }
 body .none {
   display: none !important;
+}
+
+body.darkM #about {
+  background-color: rgb(32, 14, 78);
+  color: white;
+}
+body.darkM #services {
+  background-color: rgb(32, 14, 78);
+  color: white;
+}
+body.darkM #services .card_service {
+  background-color: rgb(132, 113, 157);
+  color: black;
+}
+body.darkM #features {
+  background-color: rgb(46, 34, 78);
+  color: white;
+}
+body.darkM #testimonials {
+  background-color: rgb(32, 14, 78);
+  color: white;
+}
+body.darkM #testimonials .carousel_item {
+  background-color: rgb(132, 113, 157);
+  color: black;
+}
+body.darkM #testimonials .div_car {
+  color: white;
+}
+body.darkM #current_tech {
+  background-color: rgb(46, 34, 78);
+  color: white;
+}
+body.darkM #pricing {
+  background-color: rgb(32, 14, 78);
+  color: white;
+}
+body.darkM #pricing .btn_7 {
+  background-color: rgb(32, 14, 78);
+}
+body.darkM #pricing .card_7 {
+  background-color: rgb(132, 113, 157);
+  color: black;
+}
+body.darkM #pricing .info {
+  background-color: rgb(46, 34, 78);
+  color: white;
+}
+body.darkM #pricing .card_7:nth-of-type(2) {
+  background-color: rgb(88, 70, 249);
+}
+body.darkM #pricing .card_7:nth-of-type(2) .div_btn7 {
+  background-color: rgb(132, 113, 157);
+}
+body.darkM #pricing h3 {
+  color: rgb(132, 113, 157);
+}
+body.darkM #pricing h2 {
+  color: rgb(132, 113, 157);
+}
+body.darkM #faq .accordion {
+  background-color: rgb(52, 20, 98);
+}
+body.darkM #faq .div_accordion {
+  color: white;
+}
+body.darkM #contact {
+  background-color: rgb(46, 34, 78);
+  color: white;
+}
+body.darkM #contact .card_9 {
+  background-color: rgb(132, 113, 157);
+  color: rgb(52, 20, 98);
+}
+body.darkM #contact .card_9 input, body.darkM #contact .card_9 textarea {
+  color: rgb(52, 20, 98);
+  background-color: rgb(132, 113, 157);
+  border: 1px solid rgb(52, 20, 98);
+}
+body.darkM #contact .card_9 button {
+  color: rgb(132, 113, 157);
+  border-color: rgb(46, 34, 78);
+  background-color: rgb(46, 34, 78);
 }
 
 /*# sourceMappingURL=app.css.map */

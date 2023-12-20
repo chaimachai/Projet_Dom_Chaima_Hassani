@@ -13,32 +13,44 @@ let dropdown = document.querySelector(".dropdown");
 let nav = document.querySelector("nav");
 let h3 = nav.querySelectorAll("h3");
 
+//darkmode
+let btn_dark = document.querySelector(".dark_mode");
+
 // button section about et pricing 
 let btn_anim = document.querySelectorAll(".animation");
 
 // section services
+let services = document.querySelector("#services");
 let card_service = document.querySelectorAll(".card_service");
 
 // section testimonials
+let testimonials = document.querySelector("#testimonials");
 let carousel = document.querySelector(".contenu_testimonials");
 let carousel_item = document.querySelectorAll(".carousel_item");
 let btn = document.querySelector("#testimonials").querySelectorAll("button");
+let div_car = document.querySelectorAll(".div_car")
 
 // section current_tech
+let current_tech = document.querySelector("#current_tech")
 let h4 = document.querySelector(".h4").querySelectorAll("h4");
 let tabs = document.querySelectorAll(".tabs");
 
 // section pricing
+let pricing = document.querySelector("#pricing");
 let h2 = document.querySelector(".cards_7").querySelectorAll("h2");
 let btn_oval = document.querySelector(".oval");
 let p_month = document.querySelector(".p_month");
-let p_year = document.querySelector(".p_year")
-let month = true
+let p_year = document.querySelector(".p_year");
+let card_7 = document.querySelectorAll(".card_7");
+let btn_7 = document.querySelector(".btn_7");
+let month = true;
 
 // section faq
+let faq = document.querySelector("#faq");
 let texte_accordion = document.querySelectorAll(".texte_accordion");
 let div_accordion = document.querySelectorAll(".accordion");
 let span_chevron = document.querySelectorAll(".chevron_a");
+
 
 //.. Events
 
@@ -59,6 +71,17 @@ h3.forEach(element => {
     element.addEventListener("mouseleave",()=>{
         element.nextElementSibling.classList.remove("actif")
     })
+})
+
+// darkmode 
+btn_dark.addEventListener("click",()=>{
+    btn_dark.classList.toggle("darkM")
+    body.classList.toggle("darkM")
+    if(btn_dark.className.includes("darkM")){
+        btn_dark.firstElementChild.className = "gg-moon"
+    }else{
+        btn_dark.firstElementChild.className = "gg-sun"
+    }
 })
 
 // button section about et pricing 
@@ -125,7 +148,11 @@ card_service.forEach(element => {
                 break
         }
         element.querySelector("h4").style.color = "rgb(45,73,100)";
-        element.style.backgroundColor= "white";
+        if (body.className.includes("darkM")){
+            element.style.backgroundColor= "rgb(132, 113, 157)";
+        }else{
+            element.style.backgroundColor= "white";
+        }
         element.style.color = "black";
     })
 })
