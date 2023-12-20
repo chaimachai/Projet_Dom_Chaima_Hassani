@@ -16,6 +16,9 @@ let h3 = nav.querySelectorAll("h3");
 //darkmode
 let btn_dark = document.querySelector(".dark_mode");
 
+// ancre
+let btn_top = document.querySelector(".btn_top");
+
 // button section about et pricing 
 let btn_anim = document.querySelectorAll(".animation");
 
@@ -71,6 +74,11 @@ h3.forEach(element => {
     element.addEventListener("mouseleave",()=>{
         element.nextElementSibling.classList.remove("actif")
     })
+})
+
+// ancre
+btn_top.addEventListener("click",()=>{
+    document.documentElement.scrollTop = 0
 })
 
 // darkmode 
@@ -148,11 +156,12 @@ card_service.forEach(element => {
                 break
         }
         element.querySelector("h4").style.color = "rgb(45,73,100)";
-        if (body.className.includes("darkM")){
-            element.style.backgroundColor= "rgb(132, 113, 157)";
-        }else{
-            element.style.backgroundColor= "white";
-        }
+        // if (body.className.includes("darkM")){
+        //     element.style.backgroundColor= "rgb(132, 113, 157)";
+        // }else{
+        //     element.style.backgroundColor= "white";
+        // }
+        element.style.backgroundColor= "white";
         element.style.color = "black";
     })
 })
