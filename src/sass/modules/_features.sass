@@ -17,7 +17,8 @@
         flex-direction: column
         width: 50%
     img
-        width: 40%
+        min-width: 30%
+        max-width: 40%
     .icons_features
         display: flex
         justify-content: center
@@ -32,9 +33,15 @@
         margin-right: 1rem
         color: rgb(78, 61, 249)
         font-size: xx-large
-@media screen and (max-width: 576px)
-    .contenu_features
-        flex-direction: column-reverse !important
+    h4
+        font-family: 'Poppins', sans-serif
+    p
+        font-family: 'Open Sans', sans-serif
 @media screen and (max-width: 768px)
-    .contenu_features
-        flex-direction: column-reverse
+    #features
+        .texte_features
+            width: 80%
+        img
+            width: 80% 
+        .contenu_features
+            flex-direction: column-reverse !important

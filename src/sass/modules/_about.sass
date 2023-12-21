@@ -4,37 +4,32 @@
     align-items: center
     flex-direction: row
     padding: 4rem
+    button
+        font-family: 'Poppins', sans-serif
     div
+        font-family: 'Open Sans', sans-serif
+        h2
+            color: rgb(39, 64, 88)
+            font-family: 'Poppins', sans-serif
         width: 40%
+        p:first-of-type
+            font-style: italic
+        .animation
+            border-radius: 5px
+            border: none
+            color: white
+            padding: 1rem
+            background: linear-gradient(45deg, rgb(86, 58, 250) 0%, rgb(116, 15, 214) 100%)
+        span 
+            background-color: transparent
+            color: rgb(86, 58, 250)
+            margin-right: 1rem
     img
         width: 30%
-    span 
-        background-color: transparent
-        color: rgb(86, 58, 250)
-        margin-right: 1rem
-    .animation
-        border-radius: 5px
-        border: none
-        color: white
-        padding: 1rem
-        background: linear-gradient(45deg, rgb(86, 58, 250) 0%, rgb(116, 15, 214) 100%)
-.btn_top
-    position: fixed
-    bottom: 1rem
-    right: 1rem
-    width: 2.5rem
-    height: 2.5rem
-    border-radius: 5px
-    background-color: rgb(88, 70, 249)
-    color: white
-    text-decoration: none
-    display: flex
-    justify-content: center
-    align-items: center
-    border: none
-@media screen and (max-width: 576px)
-    #about
-        flex-direction: column
 @media screen and (max-width: 768px)
     #about
         flex-direction: column-reverse
+        div
+            width: 80%
+        img
+            width: 80%

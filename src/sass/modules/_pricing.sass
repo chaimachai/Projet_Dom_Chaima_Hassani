@@ -18,6 +18,9 @@
         flex-direction: column 
         background-color: rgb(248,248,248)
         box-shadow: 0 5px 15px -3px rgba(0,0,0,0.1)
+        h4
+            font-family: 'Poppins', sans-serif
+            color: rgb(47, 62, 78)
     .card_7:nth-of-type(1)
         p:nth-of-type(4), p:nth-of-type(5)
             text-decoration: line-through
@@ -39,6 +42,8 @@
         text-align: center
         overflow-x: hidden
         position: relative
+        p
+            font-family: 'Open Sans', sans-serif
     .advanced
         display: flex
         justify-content: center
@@ -50,19 +55,16 @@
         width: 100%
         transform: rotate(45deg)
         text-align: center
-        top: 1rem
-        left: 6rem
+        top: 0.5rem
+        left: 4rem
         padding: 0.5rem
-        // p
-        //     font-size: smaller
-        //     margin: 0
     .info
         display: flex
         justify-content: center
         align-items: center
         flex-direction: column 
         background-color: white
-        padding: 1rem 4rem 1rem 4rem
+        padding: 1rem 3rem 1rem 3rem
     button
         margin: 1rem
         padding: 1rem
@@ -70,6 +72,7 @@
         color: white
         background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%)
         border: none
+        font-family: 'Roboto', sans-serif
     .cards_7
         padding: 0
         display: grid
@@ -85,20 +88,32 @@
         h3
             position: absolute
             left: -0.75rem
-            top: -1rem
+            bottom: 0.5rem
             color: rgb(60, 46, 202)
+            font-family: 'Poppins', sans-serif
+            font-weight: 600
         h2
             color: rgb(60, 46, 202)
             font-size: xx-large
             margin: 0
+            font-family: 'Roboto', sans-serif
         p
             color: rgb(180, 180, 180)
+            font-family: 'Roboto', sans-serif
+            font-style: italic
+            margin-left: 0.2rem
     .btn_7
         display: flex
         justify-content: center
         align-items: center
         flex-direction: row
         background-color: rgb(248,248,248)
+        p
+            font-family: 'Poppins', sans-serif
+            color: rgba(0,0,0,0.2)
+            font-weight: 700
+        .actif
+            color: rgb(133,118,251)
     .oval
         width: 4rem
         height: 1.5rem
@@ -114,13 +129,12 @@
         background-color: white
         position: absolute
         left: 0.2rem
-    .actif
-        color: rgb(133,118,251)
     .year
-        animation: mvt_btn 1s forwards
+        transform: translateX(2.5rem)
+        transition: transform 1s ease
     .month
-        left: 2.8rem
-        animation: mvt_btn2 1s forwards
+        transform: translateX(0rem)
+        transition: transform 1s ease
     @keyframes mvt_btn
         to
             left: 2.8rem
@@ -128,11 +142,11 @@
         to
             left: 0.2rem
 @media screen and (max-width: 576px)
-    .cards_7
-        grid-template-columns: 1fr !important
-@media screen and (max-width: 768px)
-    .cards_7
-        grid-template-columns: 1fr 1fr !important
-@media screen and (max-width: 1268px)
-    .info
-        padding: 1rem !important
+    #pricing
+        .cards_7
+            grid-template-columns: 1fr !important
+@media screen and (max-width: 1024px)
+    #pricing
+        .cards_7
+            grid-template-columns: 1fr 1fr !important
+

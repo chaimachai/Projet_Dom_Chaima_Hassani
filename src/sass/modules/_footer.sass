@@ -2,48 +2,59 @@ footer
     background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../../../public/images/footer-bg.jpg") center center no-repeat
     color: white
     padding: 4rem 4rem 0 4rem
-    a
-        text-decoration: none
-        color: white
     .footer
         display: grid
-        grid-template-columns: 1.5fr 1fr 1fr 2fr
-        span
-            margin-right: 1rem
+        grid-template-columns: 1.5fr 1fr 1fr 2.5fr
+        h3
+            font-family: 'Poppins', sans-serif
+            font-weight: bolder
+        p
+            font-family: 'Open Sans', sans-serif
+            cursor: pointer, auto
         .span
             text-align: start
+            h1
+                font-family: 'Poppins', sans-serif
+                font-weight: 500
+            div:nth-of-type(2)
+                margin-top: 2rem
             p
                 margin: 1rem
                 margin-left: 0
-            div:nth-of-type(2)
-                margin-top: 2rem
-
             span
                 font-weight: bolder
-        .input
-            position: relative
-            width: fit-content
-        input:first-of-type
-            border: none
-            width: 20rem
-            height: 1.5rem
-            border-radius:  5px
-        input:nth-of-type(2)
-            position: absolute
-            background-color: rgb(151,83,224)
-            right: 0
-            top: 0
-            height: 100%
-            width: 5rem
-            border: none
+        span
+            margin-right: 1rem
+        a
+            text-decoration: none
             color: white
-            padding-left: 1rem
-            padding-right: 1rem
-            display: flex
-            justify-content: center
-            align-items: center
-            border-top-right-radius: 5px
-            border-bottom-right-radius: 5px
+        .news
+            .input
+                position: relative
+                width: fit-content
+                font-family: 'Open Sans', sans-serif
+                input:first-of-type
+                    width: 20rem
+                    height: 2rem
+                    border-radius: 5px
+                    border: none
+                input:nth-of-type(2)
+                    height: 100%
+                    width: 5rem
+                    padding: 0.5rem
+                    position: absolute
+                    right: 0
+                    top: 0
+                    padding-left: 1rem
+                    padding-right: 1rem
+                    border-top-right-radius: 5px
+                    border-bottom-right-radius: 5px
+                    border: none
+                    background-color: rgb(151,83,224)
+                    color: white
+                    display: flex
+                    justify-content: center
+                    align-items: center
     .logo_div
         width: 100%
         padding: 1rem
@@ -54,17 +65,17 @@ footer
         flex-direction: row
         column-gap: 1rem
         height: fit-content
-    .logo
-        width: 2rem
-        height: 2rem
-        border-radius: 50%
-        background-color: rgb(103,83,242)
-        display: flex
-        justify-content: center
-        align-items: center
+        .logo
+            width: 2rem
+            height: 2rem
+            border-radius: 50%
+            background-color: rgb(103,83,242)
+            display: flex
+            justify-content: center
+            align-items: center
 @media screen and (max-width: 768px)
     .footer
         grid-template-columns: 1fr !important
-@media screen and (max-width: 978px) and (min-width: 769px)
+@media screen and (max-width: 1100px) and (min-width: 769px)
     .footer
         grid-template-columns: 1fr 1fr !important

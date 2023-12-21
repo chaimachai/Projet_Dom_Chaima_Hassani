@@ -7,17 +7,19 @@ header
     height: 100vh
     padding: 4rem
     color: white
-    button
-        border-radius: 5px
-        background-color: transparent
-        color: white
-        border: 1px solid white
-        padding-left: 1rem
-        padding-right: 1rem
-        padding-top: 0.5rem
-        padding-bottom: 0.5rem
+    font-family: 'Poppins', sans-serif
     div
         width: 40%
+        button
+            border-radius: 5px
+            background-color: transparent
+            color: white
+            border: 1px solid white
+            padding-left: 1rem
+            padding-right: 1rem
+            padding-top: 0.5rem
+            padding-bottom: 0.5rem
+            font-family: 'Open Sans', sans-serif
     img
         min-width: 30%
         max-width: 40%
@@ -25,20 +27,9 @@ header
     @keyframes mvt
         to 
             margin-top: 2rem
-.dark_mode
-    width: 3rem
-    height: 3rem
-    border-radius: 50%
-    display: grid
-    align-content: center
-    justify-content: center
-    position: fixed
-    top: 0.5rem
-    right: 1rem
-    z-index: 4
 @media screen and (max-width: 768px)
     header
         flex-direction: column-reverse
-    img
-        width: 50%
+        img
+            width: 50%
 

@@ -3,14 +3,18 @@
     padding: 4rem
     .carousel
         width: 100%
-    .contenu_testimonials
         display: flex
-        flex-direction: row
+        justify-content: center
+        align-items: center
+    .contenu_testimonials
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: calc(100% / 3)
         overflow: hidden 
+        scroll-snap-type: x mandatory
         scroll-behavior: smooth
+        scrollbar-width: 0
         padding: 8rem 0 8rem 0
-        column-gap: 2rem
-        width: 100%
     .fa-quote-left
         margin-right: 0.5rem
         color: rgb(166, 157, 251)
@@ -18,15 +22,19 @@
         margin-left: 0.5rem
         color: rgb(166, 157, 251)
     .carousel_item
-        background-color: white
-        filter: drop-shadow(0 0 0.2rem rgba(0,0,0,0.2))
         padding: 0
         margin: 0
-        width: fit-content
-    .item
-        position: relative
-        width: 28vw
         padding: 1rem
+        background-color: transparent
+        scroll-snap-align: start
+    .item
+        background-color: white
+        filter: drop-shadow(0 0 0.2rem rgba(0,0,0,0.2))
+        position: relative
+        padding: 2rem
+        height: 150px
+        p
+            font-family: 'Open Sans', sans-serif
     .user_item
         filter: drop-shadow(0 0 0.2rem rgba(0,0,0,0.2))
         background-color: white
@@ -40,9 +48,18 @@
         background-image: url("../../../public/images/perso.jpg")
         background-size: cover
     .div_car
+        width: 10rem
+        height: 10rem
         position: absolute
-        bottom: -8rem
+        top: 11rem
         left: 2rem
+        z-index: 4
+        h4
+            margin-bottom: 0
+            font-family: 'Poppins', sans-serif
+        p
+            margin-top: 0
+            font-family: 'Poppins', sans-serif
     .btn
         display: flex
         justify-content: center
@@ -56,9 +73,11 @@
             margin: 0.2rem
         .active
             background-color: rgb(78, 61, 249)
-@media screen and (max-width: 576px)
-    .item
-        width: 100vw !important
-@media screen and (max-width: 768px)
-    .item
-        width: 50vw
+@media screen and (max-width: 700px)
+    #testimonials
+        .contenu_testimonials
+            grid-auto-columns: 100%
+@media screen and (max-width: 968px) and (min-width: 701px)
+    #testimonials
+        .contenu_testimonials
+            grid-auto-columns: 50% 

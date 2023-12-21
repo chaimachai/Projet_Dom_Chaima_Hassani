@@ -16,6 +16,8 @@
         padding: 1rem
         overflow-y: hidden
         height: 50px
+        p
+            font-family: 'Open Sans', sans-serif
     .div_accordion
         position: relative
         color: rgb(88,70,249)
@@ -24,9 +26,11 @@
         align-items: center
         flex-direction: row
         column-gap: 1rem
+        p
+            font-weight: 700
     .texte_accordion
         color: black
-        padding: 1rem
+        margin: 1rem
     .actif
         height: 100px
         transition: height 1s
@@ -36,3 +40,13 @@
     .chevron_a
         position: absolute
         right: 0
+@media screen and (max-width: 520px)
+    #faq
+        padding: 2rem
+        .actif
+            height: 250px !important
+@media screen and (max-width: 768px) and (min-width: 521px)
+    #faq
+        padding: 2rem
+        .actif
+            height: 200px !important

@@ -34,9 +34,14 @@
         padding: 2rem
         h4
             color: rgb(45,73,100)
+            font-family: 'Poppins', sans-serif
+        p
+            font-family: 'Open Sans', sans-serif
 @media screen and (max-width: 576px)
-    .cards_service
-        grid-template-columns: 1fr !important
-@media screen and (max-width: 768px)
-    .cards_service
-        grid-template-columns: 1fr 1fr !important
+    #services
+        .cards_service
+            grid-template-columns: 1fr !important
+@media screen and (max-width: 968px) and (min-width: 577px)
+    #services
+        .cards_service
+            grid-template-columns: 1fr 1fr !important

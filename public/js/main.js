@@ -4,6 +4,7 @@ let body = document.body;
 
 // header
 let header = document.querySelector("header");
+let btn_header = header.querySelector("button");
 
 // nav
 let menu_burger = document.querySelector(".menu_burger");
@@ -12,6 +13,8 @@ let li_dropdown = document.querySelector(".li_dropdown");
 let dropdown = document.querySelector(".dropdown");
 let nav = document.querySelector("nav");
 let h3 = nav.querySelectorAll("h3");
+let btn_nav = nav.querySelector(".started");
+let h3S;
 
 //darkmode
 let btn_dark = document.querySelector(".dark_mode");
@@ -19,19 +22,29 @@ let btn_dark = document.querySelector(".dark_mode");
 // button section about et pricing 
 let btn_anim = document.querySelectorAll(".animation");
 
+// section about
+let about = document.querySelector("#about");
+
+// section counts
+let counts = document.querySelector("#counts");
+
 // section services
 let services = document.querySelector("#services");
 let card_service = document.querySelectorAll(".card_service");
 
+// section features
+let features = document.querySelector("#features");
 // section testimonials
 let testimonials = document.querySelector("#testimonials");
+let carous = document.querySelector(".carousel")
 let carousel = document.querySelector(".contenu_testimonials");
 let carousel_item = document.querySelectorAll(".carousel_item");
+let item = document.querySelectorAll(".item");
 let btn = document.querySelector("#testimonials").querySelectorAll("button");
-let div_car = document.querySelectorAll(".div_car")
+let div_car = document.querySelectorAll(".div_car");
 
 // section current_tech
-let current_tech = document.querySelector("#current_tech")
+let current_tech = document.querySelector("#current_tech");
 let h4 = document.querySelector(".h4").querySelectorAll("h4");
 let tabs = document.querySelectorAll(".tabs");
 
@@ -54,6 +67,16 @@ let span_chevron = document.querySelectorAll(".chevron_a");
 
 //.. Events
 
+// header
+btn_header.addEventListener("mouseover",()=>{
+    btn_header.style.backgroundColor = "white";
+    btn_header.style.color = "rgb(98, 86, 220)";
+})
+btn_header.addEventListener("mouseleave",()=>{
+    btn_header.style.backgroundColor = "transparent";
+    btn_header.style.color = "white";
+})
+
 // nav
 menu_burger.addEventListener("click",()=>{
     nav_burger.classList.toggle("nav_burger");
@@ -62,15 +85,54 @@ menu_burger.addEventListener("click",()=>{
 li_dropdown.addEventListener("click",()=>{
     dropdown.classList.toggle("none");
 })
+// document.addEventListener("scroll",()=>{
+//     if(window.scrollY > 0){
+//         h3.forEach(element => {
+//             element.classList.remove("actif");
+//         })
+//         nav.querySelector(".h3_header").classList.add("actif");
+//     }if (window.scrollY > header.clientHeight && window.scrollY < (about.clientHeight + header.clientHeight)){
+//         h3.forEach(element => {
+//             element.classList.remove("actif");
+//         })
+//         nav.querySelector(".h3_about").classList.add("actif");
+//     }if (window.scrollY > (about.clientHeight + header.clientHeight + counts.clientHeight) && window.scrollY < (about.clientHeight + header.clientHeight + services.clientHeight + counts.clientHeight) ){
+//         h3.forEach(element => {
+//             element.classList.remove("actif");
+//         })
+//         nav.querySelector(".h3_services").classList.add("actif");
+//     }
+// })
+document.addEventListener("scroll",()=>{
+    if(window.scrollY > header.clientHeight){
+        nav.style.background =  "linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%)"
+    }else{
+        nav.style.background = ""
+    }
+})
 h3.forEach(element => {
     element.addEventListener("mouseover",()=>{
-        element.nextElementSibling.classList.add("actif")
+        if (element != document.querySelector('.h3_header')){
+            element.classList.add("actif1");
+            element.firstElementChild.classList.add("actif1");
+            element.nextElementSibling.classList.add("actif");
+        }
     })
 })
 h3.forEach(element => {
     element.addEventListener("mouseleave",()=>{
-        element.nextElementSibling.classList.remove("actif")
+        if (element != document.querySelector('.h3_header')){
+            element.classList.remove("actif1");
+            element.firstElementChild.classList.remove("actif1");
+            element.nextElementSibling.classList.remove("actif");
+        }
     })
+})
+btn_nav.addEventListener("mouseover",()=>{
+    btn_nav.style.borderColor = "white"
+})
+btn_nav.addEventListener("mouseleave",()=>{
+    btn_nav.style.borderColor = "rgba(255,255,255,0.5)"
 })
 
 // darkmode 
@@ -124,7 +186,6 @@ card_service.forEach(element => {
         element.firstElementChild.style.color = "white";
     })
 })
-
 card_service.forEach(element => {
     element.addEventListener("mouseleave",()=>{
         switch(element){
@@ -158,108 +219,121 @@ card_service.forEach(element => {
     })
 })
 
-//section testimonials
+// section testimonials
+// let largeur = carousel_item[0].clientWidth;
+// btn.forEach(elements => {
+//     elements.addEventListener("click",(e)=>{
+//         if (e.target ==  btn[0]){
+//             btn.forEach(element => {
+//                 if(element.className.includes("active")){
+//                     if(element.className.includes("btn2" 1)){
+//                         carousel.scrollLeft -= largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn3" 2)){
+//                         carousel.scrollLeft -= 2*largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn4" 3)){
+//                         carousel.scrollLeft -= 3*largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn5"4)){
+//                         carousel.scrollLeft -= 4*largeur
+//                         element.classList.remove("active")
+//                     }
+//                 }
+//             })
+//         }
+//         if (e.target ==  btn[1]){
+//             btn.forEach(element => {
+//                 if(element.className.includes("active")){
+//                     if(element.className.includes("btn1" 0)){
+//                         carousel.scrollLeft += largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn3" 2)){
+//                         console.log("test3");
+//                         carousel.scrollLeft -= largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn4" 3)){
+//                         console.log("test4");
+//                         carousel.scrollLeft -= 2*largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn5" 4)){
+//                         console.log("test5");
+//                         carousel.scrollLeft -= 3*largeur
+//                         element.classList.remove("active")
+//                     }
+//                 }
+//             })
+//         }
+//         if (e.target ==  btn[2]){
+//             btn.forEach(element => {
+//                 if(element.className.includes("active")){
+//                     if(element.className.includes("btn1" 0)){
+//                         carousel.scrollLeft += 2*largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn2" 1)){
+//                         carousel.scrollLeft += largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn4" 3)){
+//                         carousel.scrollLeft -= largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn5" 4)){
+//                         carousel.scrollLeft -= 2*largeur
+//                         element.classList.remove("active")
+//                     }
+//                 }
+//             })
+//         }
+//         if (e.target ==  btn[3]){
+//             btn.forEach(element => {
+//                 if(element.className.includes("active")){
+//                     if(element.className.includes("btn1")){
+//                         carousel.scrollLeft += 3*largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn2")){
+//                         carousel.scrollLeft += 2*largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn3")){
+//                         carousel.scrollLeft += largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn5")){
+//                         carousel.scrollLeft -= largeur
+//                         element.classList.remove("active")
+//                     }
+//                 }
+//             })
+//         }
+//         if (e.target ==  btn[4]){
+//             btn.forEach(element => {
+//                 if(element.className.includes("active")){
+//                     if(element.className.includes("btn1")){
+//                         carousel.scrollLeft += 4*largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn2")){
+//                         carousel.scrollLeft += 3*largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn3")){
+//                         carousel.scrollLeft += 2*largeur
+//                         element.classList.remove("active")
+//                     }else if (element.className.includes("btn4")){
+//                         carousel.scrollLeft += largeur
+//                         element.classList.remove("active")
+//                     }
+//                 }
+//             })
+//         }
+//         e.target.classList.add("active")
+//     })
+// })
+
 btn.forEach(elements => {
     elements.addEventListener("click",(e)=>{
-        if (e.target ==  btn[0]){
-            btn.forEach(element => {
-                if(element.className.includes("active")){
-                    if(element.className.includes("btn2")){
-                        carousel.scrollLeft -= carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn3")){
-                        carousel.scrollLeft -= 2*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn4")){
-                        carousel.scrollLeft -= 3*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn5")){
-                        carousel.scrollLeft -= 4*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }
-                }
-            })
-        }
-        if (e.target ==  btn[1]){
-            btn.forEach(element => {
-                if(element.className.includes("active")){
-                    if(element.className.includes("btn1")){
-                        carousel.scrollLeft += carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn3")){
-                        console.log("test3");
-                        carousel.scrollLeft -= carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn4")){
-                        console.log("test4");
-                        carousel.scrollLeft -= 2*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn5")){
-                        console.log("test5");
-                        carousel.scrollLeft -= 3*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }
-                }
-            })
-        }
-        if (e.target ==  btn[2]){
-            btn.forEach(element => {
-                if(element.className.includes("active")){
-                    if(element.className.includes("btn1")){
-                        carousel.scrollLeft += 2*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn2")){
-                        carousel.scrollLeft += carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn4")){
-                        carousel.scrollLeft -= carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn5")){
-                        carousel.scrollLeft -= 2*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }
-                }
-            })
-        }
-        if (e.target ==  btn[3]){
-            btn.forEach(element => {
-                if(element.className.includes("active")){
-                    if(element.className.includes("btn1")){
-                        carousel.scrollLeft += 3*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn2")){
-                        carousel.scrollLeft += 2*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn3")){
-                        carousel.scrollLeft += carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn5")){
-                        carousel.scrollLeft -= carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }
-                }
-            })
-        }
-        if (e.target ==  btn[4]){
-            btn.forEach(element => {
-                if(element.className.includes("active")){
-                    if(element.className.includes("btn1")){
-                        carousel.scrollLeft += 4*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn2")){
-                        carousel.scrollLeft -= 3*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn3")){
-                        carousel.scrollLeft -= 2*carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }else if (element.className.includes("btn4")){
-                        carousel.scrollLeft += carousel_item[0].clientWidth
-                        element.classList.remove("active")
-                    }
-                }
-            })
-        }
-        e.target.classList.add("active")
+        btn.forEach(element => {
+            if(element.className.includes("active") && element != e.target){
+                carousel.scrollLeft += (Array.from(btn).indexOf(e.target) - Array.from(btn).indexOf(element))*carousel_item[0].clientWidth
+                element.classList.remove("active")
+                e.target.classList.add("active")
+            }
+        })
     })
 })
 
@@ -268,11 +342,13 @@ h4.forEach(element => {
     element.parentElement.addEventListener("click",()=>{
         tabs.forEach(element =>{
             element.classList.add("none");
+            element.classList.remove("actif");
         })
         h4.forEach(hr => {
             hr.nextElementSibling.classList.remove("actif");
         })
         document.querySelector(`.div_${element.className}`).classList.remove("none");
+        document.querySelector(`.div_${element.className}`).classList.add("actif");
         element.nextElementSibling.classList.add("actif");
     })
 })
