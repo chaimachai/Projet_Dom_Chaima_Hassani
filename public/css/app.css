@@ -10744,7 +10744,6 @@ nav .menu_burger {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: 0;
-  padding: 8rem 0 8rem 0;
 }
 #testimonials .fa-quote-left {
   margin-right: 0.5rem;
@@ -10764,9 +10763,12 @@ nav .menu_burger {
 #testimonials .item {
   background-color: white;
   filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.2));
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 2rem;
-  height: 150px;
+  border-radius: 5px;
 }
 #testimonials .item p {
   font-family: "Open Sans", sans-serif;
@@ -10783,17 +10785,16 @@ nav .menu_burger {
   flex-direction: column;
   background-image: url("../../../public/images/perso.jpg");
   background-size: cover;
+  position: absolute;
+  top: -2rem;
+  left: 2rem;
 }
 #testimonials .div_car {
-  width: 10rem;
-  height: 10rem;
-  position: absolute;
-  top: 11rem;
-  left: 2rem;
-  z-index: 4;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  position: relative;
 }
 #testimonials .div_car h4 {
-  margin-bottom: 0;
+  margin: 0;
   font-family: "Poppins", sans-serif;
 }
 #testimonials .div_car p {
@@ -10842,6 +10843,9 @@ nav .menu_burger {
   align-items: center;
   flex-direction: row;
   column-gap: 1rem;
+}
+#current_tech .h4 h4 {
+  cursor: pointer;
 }
 #current_tech h4 {
   margin-bottom: 0;
@@ -11050,6 +11054,7 @@ nav .menu_burger {
   background-color: rgb(133, 118, 251);
   position: relative;
   margin: 0.5rem;
+  cursor: pointer;
 }
 #pricing .rond {
   width: 1.5rem;
@@ -11105,6 +11110,7 @@ nav .menu_burger {
   row-gap: 1rem;
 }
 #faq .accordion {
+  cursor: pointer;
   background-color: white;
   padding: 1rem;
   overflow-y: hidden;
@@ -11203,6 +11209,7 @@ nav .menu_burger {
 }
 #contact .iframe iframe {
   width: 100%;
+  height: 100%;
 }
 #contact form {
   display: grid;
@@ -11323,6 +11330,7 @@ footer .footer .news .input input:nth-of-type(2) {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 footer .logo_div {
   width: 100%;
@@ -11360,6 +11368,7 @@ html {
 }
 
 body {
+  cursor: default;
   margin: 0;
   padding: 0;
 }
@@ -11382,6 +11391,9 @@ body .titre hr {
   height: 0.1rem;
   background-color: rgb(88, 70, 249);
   border: 1px solid rgb(88, 70, 249);
+}
+body button {
+  cursor: pointer;
 }
 body .none {
   display: none !important;
@@ -11414,6 +11426,15 @@ body .dark_mode {
   top: 0.5rem;
   right: 1rem;
   z-index: 4;
+  box-shadow: 0 5px 15px -3px rgba(255, 255, 255, 0.5);
+}
+body .gg-sun {
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+body .gg-moon {
+  transform: rotate(-450deg);
+  transition: all 1s;
 }
 
 @media screen and (max-width: 400px) {
@@ -11424,7 +11445,7 @@ body .dark_mode {
   }
 }
 body.darkM #about {
-  background-color: rgb(32, 14, 78);
+  background-color: rgb(46, 34, 78);
   color: white;
 }
 body.darkM #about h2 {
@@ -11432,7 +11453,12 @@ body.darkM #about h2 {
 }
 body.darkM #services {
   background-color: rgb(32, 14, 78);
+}
+body.darkM #services .titre {
   color: white;
+}
+body.darkM #services .card_service {
+  box-shadow: inset 0 0 0 500px rgba(132, 113, 157, 0.4);
 }
 body.darkM #features {
   background-color: rgb(46, 34, 78);
@@ -11445,6 +11471,10 @@ body.darkM #testimonials {
 body.darkM #testimonials .item {
   background-color: rgb(132, 113, 157);
   color: black;
+  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.4));
+}
+body.darkM #testimonials .user_item {
+  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.4));
 }
 body.darkM #testimonials .div_car {
   color: white;
@@ -11466,6 +11496,7 @@ body.darkM #pricing .btn_7 {
 body.darkM #pricing .card_7 {
   background-color: rgb(132, 113, 157);
   color: black;
+  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.4));
 }
 body.darkM #pricing .info {
   background-color: rgb(46, 34, 78);
@@ -11494,6 +11525,7 @@ body.darkM #contact {
   color: white;
 }
 body.darkM #contact .card_9 {
+  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.2));
   background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
 }
 body.darkM #contact .card_9 input, body.darkM #contact .card_9 textarea {

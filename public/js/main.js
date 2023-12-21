@@ -1,4 +1,5 @@
 //.. Variables
+
 // body
 let body = document.body;
 
@@ -34,6 +35,7 @@ let card_service = document.querySelectorAll(".card_service");
 
 // section features
 let features = document.querySelector("#features");
+
 // section testimonials
 let testimonials = document.querySelector("#testimonials");
 let carous = document.querySelector(".carousel")
@@ -104,12 +106,18 @@ li_dropdown.addEventListener("click",()=>{
 //     }
 // })
 document.addEventListener("scroll",()=>{
-    if(window.scrollY > header.clientHeight){
-        nav.style.background =  "linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%)"
+    if(window.scrollY > header.clientHeight - nav.clientHeight){
+        nav.style.backgroundColor = "rgba(61, 47, 192, 0.9)"
     }else{
-        nav.style.background = ""
+        nav.style.backgroundColor = "transparent";
+    }
+    if (window.scrollY > (nav.clientHeight + 4* document.querySelector(".btn_top").clientHeight)){
+        document.querySelector(".btn_top").classList.remove("none")
+    }else{
+        document.querySelector(".btn_top").classList.add("none")
     }
 })
+
 h3.forEach(element => {
     element.addEventListener("mouseover",()=>{
         if (element != document.querySelector('.h3_header')){
