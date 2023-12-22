@@ -20,6 +20,10 @@
         display: grid
         grid-template-columns: repeat(2,1fr)
         gap: 2rem
+        .card_9:first-of-type
+            margin-right: 1rem
+        .card_9:nth-of-type(2)
+            margin-left: -1rem
     .card_9
         display: flex
         justify-content: center
@@ -67,9 +71,19 @@
             grid-template-columns: 1fr
         .ligne2
             grid-template-columns: 1fr
+            .card_9:first-of-type
+                margin-right: 0 !important
+            .card_9:nth-of-type(2)
+                margin-left: 0 !important
         form
             div
                 grid-template-columns: 1fr
 @media screen and (max-width: 978px)  and (min-width: 577px)
+    #contact
+        padding: 2rem
     .ligne2
         grid-template-columns: 1fr !important
+        .card_9:first-of-type
+            margin-right: 0 !important
+        .card_9:nth-of-type(2)
+            margin-left: 0 !important

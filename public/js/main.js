@@ -66,6 +66,8 @@ let texte_accordion = document.querySelectorAll(".texte_accordion");
 let div_accordion = document.querySelectorAll(".accordion");
 let span_chevron = document.querySelectorAll(".chevron_a");
 
+// section contact
+let contact = document.querySelector("#contact");
 
 //.. Events
 
@@ -79,6 +81,8 @@ btn_header.addEventListener("mouseleave",()=>{
     btn_header.style.color = "white";
 })
 
+
+
 // nav
 menu_burger.addEventListener("click",()=>{
     nav_burger.classList.toggle("nav_burger");
@@ -87,24 +91,65 @@ menu_burger.addEventListener("click",()=>{
 li_dropdown.addEventListener("click",()=>{
     dropdown.classList.toggle("none");
 })
-// document.addEventListener("scroll",()=>{
-//     if(window.scrollY > 0){
-//         h3.forEach(element => {
-//             element.classList.remove("actif");
-//         })
-//         nav.querySelector(".h3_header").classList.add("actif");
-//     }if (window.scrollY > header.clientHeight && window.scrollY < (about.clientHeight + header.clientHeight)){
-//         h3.forEach(element => {
-//             element.classList.remove("actif");
-//         })
-//         nav.querySelector(".h3_about").classList.add("actif");
-//     }if (window.scrollY > (about.clientHeight + header.clientHeight + counts.clientHeight) && window.scrollY < (about.clientHeight + header.clientHeight + services.clientHeight + counts.clientHeight) ){
-//         h3.forEach(element => {
-//             element.classList.remove("actif");
-//         })
-//         nav.querySelector(".h3_services").classList.add("actif");
-//     }
-// })
+
+document.addEventListener("scroll",()=>{
+    let pos_about = header.clientHeight - nav.clientHeight;
+    let pos_counts = pos_about + about.clientHeight;
+    let pos_services = pos_counts + counts.clientHeight;
+    let pos_features = pos_services + services.clientHeight;
+    let pos_testimonials = pos_features + features.clientHeight;
+    let pos_current = pos_testimonials + testimonials.clientHeight;
+    let pos_pricing = pos_current + current_tech.clientHeight;
+    let pos_faq = pos_pricing + pricing.clientHeight;
+    let pos_contact = pos_faq + faq.clientHeight;
+    let pos_footer = pos_contact + contact.clientHeight;
+    if(window.scrollY < (header.clientHeight - nav.clientHeight)){
+        h3.forEach(element => {
+            element.firstElementChild.classList.remove("actif");
+            element.nextElementSibling.classList.remove("actif");
+        })
+        nav.querySelector(".h3_header").firstElementChild.classList.add("actif");
+        nav.querySelector(".h3_header").nextElementSibling.classList.add("actif");
+    }if (window.scrollY > pos_about && window.scrollY < pos_counts){
+        h3.forEach(element => {
+            element.firstElementChild.classList.remove("actif");
+            element.nextElementSibling.classList.remove("actif");
+        })
+        nav.querySelector(".h3_about").firstElementChild.classList.add("actif");
+        nav.querySelector(".h3_about").nextElementSibling.classList.add("actif");
+    }if (window.scrollY > pos_counts && window.scrollY < pos_services){
+        h3.forEach(element => {
+            element.firstElementChild.classList.remove("actif");
+            element.nextElementSibling.classList.remove("actif");
+        })
+    }if (window.scrollY > pos_services && window.scrollY < pos_features){
+        h3.forEach(element => {
+            element.firstElementChild.classList.remove("actif");
+            element.nextElementSibling.classList.remove("actif");
+        })
+        nav.querySelector(".h3_services").firstElementChild.classList.add("actif");
+        nav.querySelector(".h3_services").nextElementSibling.classList.add("actif");
+    }if(window.scrollY > pos_features && window.scrollY < pos_testimonials){
+    }if(window.scrollY > pos_testimonials && window.scrollY < pos_contact){
+        h3.forEach(element => {
+            element.firstElementChild.classList.remove("actif");
+            element.nextElementSibling.classList.remove("actif");
+        })
+    }if(window.scrollY > pos_contact && window.scrollY < pos_footer){
+        h3.forEach(element => {
+            element.firstElementChild.classList.remove("actif");
+            element.nextElementSibling.classList.remove("actif");
+        })
+        nav.querySelector(".h3_contact").firstElementChild.classList.add("actif");
+        nav.querySelector(".h3_contact").nextElementSibling.classList.add("actif");
+    }if (window.scrollY > pos_footer){
+        h3.forEach(element => {
+            element.firstElementChild.classList.remove("actif");
+            element.nextElementSibling.classList.remove("actif");
+        })
+    }
+})
+
 document.addEventListener("scroll",()=>{
     if(window.scrollY > header.clientHeight - nav.clientHeight){
         nav.style.backgroundColor = "rgba(61, 47, 192, 0.9)"
@@ -124,6 +169,15 @@ h3.forEach(element => {
             element.classList.add("actif1");
             element.firstElementChild.classList.add("actif1");
             element.nextElementSibling.classList.add("actif");
+        }
+    })
+})
+h3.forEach(element => {
+    element.addEventListener("click",()=>{
+        if(element != li_dropdown){
+            nav_burger.classList.remove("nav_burger");
+            nav_burger.classList.add("nav_none");
+            dropdown.classList.add("none");
         }
     })
 })
@@ -228,116 +282,27 @@ card_service.forEach(element => {
 })
 
 // section testimonials
-// let largeur = carousel_item[0].clientWidth;
-// btn.forEach(elements => {
-//     elements.addEventListener("click",(e)=>{
-//         if (e.target ==  btn[0]){
-//             btn.forEach(element => {
-//                 if(element.className.includes("active")){
-//                     if(element.className.includes("btn2" 1)){
-//                         carousel.scrollLeft -= largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn3" 2)){
-//                         carousel.scrollLeft -= 2*largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn4" 3)){
-//                         carousel.scrollLeft -= 3*largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn5"4)){
-//                         carousel.scrollLeft -= 4*largeur
-//                         element.classList.remove("active")
-//                     }
-//                 }
-//             })
-//         }
-//         if (e.target ==  btn[1]){
-//             btn.forEach(element => {
-//                 if(element.className.includes("active")){
-//                     if(element.className.includes("btn1" 0)){
-//                         carousel.scrollLeft += largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn3" 2)){
-//                         console.log("test3");
-//                         carousel.scrollLeft -= largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn4" 3)){
-//                         console.log("test4");
-//                         carousel.scrollLeft -= 2*largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn5" 4)){
-//                         console.log("test5");
-//                         carousel.scrollLeft -= 3*largeur
-//                         element.classList.remove("active")
-//                     }
-//                 }
-//             })
-//         }
-//         if (e.target ==  btn[2]){
-//             btn.forEach(element => {
-//                 if(element.className.includes("active")){
-//                     if(element.className.includes("btn1" 0)){
-//                         carousel.scrollLeft += 2*largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn2" 1)){
-//                         carousel.scrollLeft += largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn4" 3)){
-//                         carousel.scrollLeft -= largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn5" 4)){
-//                         carousel.scrollLeft -= 2*largeur
-//                         element.classList.remove("active")
-//                     }
-//                 }
-//             })
-//         }
-//         if (e.target ==  btn[3]){
-//             btn.forEach(element => {
-//                 if(element.className.includes("active")){
-//                     if(element.className.includes("btn1")){
-//                         carousel.scrollLeft += 3*largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn2")){
-//                         carousel.scrollLeft += 2*largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn3")){
-//                         carousel.scrollLeft += largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn5")){
-//                         carousel.scrollLeft -= largeur
-//                         element.classList.remove("active")
-//                     }
-//                 }
-//             })
-//         }
-//         if (e.target ==  btn[4]){
-//             btn.forEach(element => {
-//                 if(element.className.includes("active")){
-//                     if(element.className.includes("btn1")){
-//                         carousel.scrollLeft += 4*largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn2")){
-//                         carousel.scrollLeft += 3*largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn3")){
-//                         carousel.scrollLeft += 2*largeur
-//                         element.classList.remove("active")
-//                     }else if (element.className.includes("btn4")){
-//                         carousel.scrollLeft += largeur
-//                         element.classList.remove("active")
-//                     }
-//                 }
-//             })
-//         }
-//         e.target.classList.add("active")
-//     })
-// })
-
+setInterval(() => {
+    if(go){
+        let index = Array.from(btn).findIndex(element => element.className.includes("active"))
+        if(index != Array.from(btn).length - 1){
+            btn[index + 1].classList.add("active")
+            btn[index].classList.remove("active")
+            carousel.scrollLeft += carousel_item[0].clientWidth
+        }else{
+            carousel.scrollLeft -= (Array.from(btn).length -1)*carousel_item[0].clientWidth
+            btn[0].classList.add("active")
+            btn[index].classList.remove("active")
+        }
+    }
+}, 3000);
 btn.forEach(elements => {
     elements.addEventListener("click",(e)=>{
         btn.forEach(element => {
             if(element.className.includes("active") && element != e.target){
-                carousel.scrollLeft += (Array.from(btn).indexOf(e.target) - Array.from(btn).indexOf(element))*carousel_item[0].clientWidth
+                let indexBtnActif = Array.from(btn).indexOf(element)
+                let indexBtnClick = Array.from(btn).indexOf(e.target) 
+                carousel.scrollLeft += (indexBtnClick - indexBtnActif)*carousel_item[0].clientWidth
                 element.classList.remove("active")
                 e.target.classList.add("active")
             }
