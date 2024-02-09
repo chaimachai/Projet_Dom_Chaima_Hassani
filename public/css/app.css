@@ -10799,7 +10799,7 @@ nav .menu_burger {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("../../../public/images/perso.jpg");
+  background-image: url(".src/../../../public/images/perso.jpg");
   background-size: cover;
   position: absolute;
   top: -2rem;
