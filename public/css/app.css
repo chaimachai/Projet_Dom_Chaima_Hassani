@@ -10589,7 +10589,7 @@ nav .menu_burger {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-  background-image: url("/../../../public/images/counts-bg.png");
+  background-image: url(".src/../../../public/images/counts-bg.png");
   color: white;
   padding: 4rem;
 }
@@ -11397,12 +11397,12 @@ html {
 }
 
 body {
-  cursor: url("./../../../public/images/cursor1.png"), auto;
+  cursor: url(".src/../../../public/images/cursor1.png"), auto;
   margin: 0;
   padding: 0;
 }
 body .li_dropdown, body nav a, body button, body #current_tech h4, body #pricing .oval, body #pricing .card_7, body #faq .accordion, body footer a, body footer .input input:nth-of-type(2), body .btn_top, body .titre h2 {
-  cursor: url("../../../public/images/cursor2.png"), auto;
+  cursor: url(".src/../../../public/images/cursor2.png"), auto;
 }
 body .titre {
   display: flex;
