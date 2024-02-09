@@ -283,17 +283,15 @@ card_service.forEach(element => {
 
 // section testimonials
 setInterval(() => {
-    if(go){
-        let index = Array.from(btn).findIndex(element => element.className.includes("active"))
-        if(index != Array.from(btn).length - 1){
-            btn[index + 1].classList.add("active")
-            btn[index].classList.remove("active")
-            carousel.scrollLeft += carousel_item[0].clientWidth
-        }else{
-            carousel.scrollLeft -= (Array.from(btn).length -1)*carousel_item[0].clientWidth
-            btn[0].classList.add("active")
-            btn[index].classList.remove("active")
-        }
+    let index = Array.from(btn).findIndex(element => element.className.includes("active"))
+    if(index != Array.from(btn).length - 1){
+        btn[index + 1].classList.add("active")
+        btn[index].classList.remove("active")
+        carousel.scrollLeft += carousel_item[0].clientWidth
+    }else{
+        carousel.scrollLeft -= (Array.from(btn).length -1)*carousel_item[0].clientWidth
+        btn[0].classList.add("active")
+        btn[index].classList.remove("active")
     }
 }, 3000);
 btn.forEach(elements => {
